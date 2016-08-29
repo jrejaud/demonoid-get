@@ -112,11 +112,9 @@ var getUserQueryFromCommandLine = function () {
     process.argv.forEach(function (val, index, array) {
         if (index==2) {
             userQuery=val;
-            console.log(userQuery);
         }
         else if (index>2) {
             userQuery=userQuery+"+"+val;
-            console.log(userQuery);
         }
     });
     return userQuery;
@@ -128,8 +126,6 @@ var userQuery = getUserQueryFromCommandLine();
 if (userQuery.length==0) {
     return console.error("You need to provide a query");
 }
-
-console.log("Your query: "+userQuery);
 
 getTorrentURLS(userQuery, function (err, links) {
     var results = [];
