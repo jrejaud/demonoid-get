@@ -1,0 +1,21 @@
+{
+  "name": "demonoid-get",
+  "version": "1.0.0",
+  "description": "Search Demonoid from the command line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "demonoid"
+  ],
+  "author": "Jordan Rejaud",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "open": "0.0.5",
+    "prompt-sync": "^4.1.4",
+    "q": "^1.4.1",
+    "request": "^2.74.0"
+  }
+}
