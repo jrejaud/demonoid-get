@@ -16,7 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^0.22.0",
-    "commander": "^2.9.0",
     "open": "0.0.5",
     "prompt-sync": "^4.1.4",
     "q": "^1.4.1",
