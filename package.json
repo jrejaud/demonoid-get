@@ -10,7 +10,7 @@
     "demonoid"
   ],
   "bin": {
-    "demonoid-get": "index.js"
+    "demonoid-get": "./index.js"
   },
   "author": "Jordan Rejaud",
   "license": "ISC",

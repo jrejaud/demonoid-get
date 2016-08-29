@@ -1,5 +1,5 @@
+#!/usr/bin/env node
 //Written by Jordan Rejaud
-
 var request = require("request");
 var cheerio = require("cheerio");
 var prompt = require("prompt-sync")();
