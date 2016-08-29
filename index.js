@@ -59,6 +59,9 @@ var convertQueryToURL = function(query) {
 };
 
 var showUserResultsAndHaveThemPickOne = function(results) {
+    if (results.length==0) {
+        return console.error("No Torrents found :(");
+    }
     console.log("Found:");
     for (var i=0;i<results.length;i++) {
         console.log(i+": "+results[i].name);
@@ -109,9 +112,11 @@ var getUserQueryFromCommandLine = function () {
     process.argv.forEach(function (val, index, array) {
         if (index==2) {
             userQuery=val;
+            console.log(userQuery);
         }
         else if (index>2) {
             userQuery=userQuery+"+"+val;
+            console.log(userQuery);
         }
     });
     return userQuery;
@@ -119,6 +124,12 @@ var getUserQueryFromCommandLine = function () {
 
 //Start here
 var userQuery = getUserQueryFromCommandLine();
+
+if (userQuery.length==0) {
+    return console.error("You need to provide a query");
+}
+
+console.log("Your query: "+userQuery);
 
 getTorrentURLS(userQuery, function (err, links) {
     var results = [];
