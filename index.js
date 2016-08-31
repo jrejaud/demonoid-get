@@ -42,6 +42,8 @@ var getTorrentURLNameAndMagnetLink = function (link, callback) {
         var $ = cheerio.load(html);
         //Get the name
         var torrentName = $("td.ctable_header").first().text();
+        //Remove the "Details for " from each torrent name
+        torrentName = torrentName.substr(12);
         //Get the magnet link
         $("a").each(function(i, element) {
            var linkURL = $(this).attr("href");
